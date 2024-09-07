@@ -13,17 +13,6 @@ td {
   border-bottom: 1px solid #ddd;
 }
 
-/* Highlight the sorted column */
-th.sorted-asc {
-  background-color: #cce5ff;
-  color: #0056b3;
-}
-
-th.sorted-desc {
-  background-color: #ffe5e5;
-  color: #d9534f;
-}
-
 /* Add hover effect to table rows */
 tr:hover {
   background-color: #f5f5f5;
@@ -32,7 +21,7 @@ tr:hover {
 /* Styling for buttons and links */
 button,
 a {
-  padding: 10px 20px;
+  padding: 8px 16px;
   text-decoration: none;
   border-radius: 5px;
   font-size: 16px;
@@ -41,18 +30,30 @@ a {
 
 a {
   color: white;
-  background-color: #4caf50;
+  background-color: #33b96fb0;
+}
+
+/* Custom background color for ascending sorted column */
+a.sorted-asc {
+  background-color: #cce5ff;
+  color: #0056b3;
+}
+
+/* Custom background color for descending sorted column */
+a.sorted-desc {
+  background-color: #ffe5e5;
+  color: #d9534f;
 }
 
 button {
   color: white;
-  background-color: #f44336;
+  background-color: #f44336c6;
   display: inline-block;
 }
 
 a:hover,
 button:hover {
-  background-color: #333;
+  background-color: #186115ee;
 }
 
 /* Add general layout improvements */
@@ -98,7 +99,7 @@ form input[type="submit"] {
   padding: 10px;
   font-size: 18px;
   color: white;
-  background-color: #4caf50;
+  background-color: #33b96fb0;
   border: none;
   border-radius: 5px;
   cursor: pointer;
