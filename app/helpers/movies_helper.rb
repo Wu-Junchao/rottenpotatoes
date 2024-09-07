@@ -10,7 +10,10 @@ module MoviesHelper
     direction = (column == sort_column && sort_direction == 'asc') ? 'desc' : 'asc'
     arrow = (column == sort_column) ? (sort_direction == 'asc' ? ' ▲' : ' ▼') : ''
 
-    # Generate the link with title and arrow, and toggle direction
-    link_to title + arrow, { sort: column, direction: direction }
+    # Add CSS class for sorted column
+    css_class = column == sort_column ? (sort_direction == 'asc' ? 'sorted-asc' : 'sorted-desc') : ''
+
+    # Generate the link with title, arrow, and CSS class
+    link_to title + arrow, { sort: column, direction: direction }, class: css_class
   end
 end

@@ -1,0 +1,109 @@
+/* Basic table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Highlight the sorted column */
+th.sorted-asc {
+  background-color: #cce5ff;
+  color: #0056b3;
+}
+
+th.sorted-desc {
+  background-color: #ffe5e5;
+  color: #d9534f;
+}
+
+/* Add hover effect to table rows */
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Styling for buttons and links */
+button,
+a {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+a {
+  color: white;
+  background-color: #4caf50;
+}
+
+button {
+  color: white;
+  background-color: #f44336;
+  display: inline-block;
+}
+
+a:hover,
+button:hover {
+  background-color: #333;
+}
+
+/* Add general layout improvements */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  font-weight: bold;
+}
+form.button_to {
+  display: block; /* This will force the destroy button to be on its own line */
+  margin-top: 20px;
+}
+form input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input[type="submit"] {
+  padding: 10px;
+  font-size: 18px;
+  color: white;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #333;
+}
