@@ -7,6 +7,6 @@
 <br>
 
 <div>
-  <%= link_to "Show this movie", @movie %> |
-  <%= link_to "Back to movies", movies_path %>
+  <%= link_to "Show this movie", movie_path(@movie, sort: params[:sort], direction: params[:direction])%> |
+  <%= link_to "Back to movies", movies_path(sort: params[:sort], direction: params[:direction]) %>
 </div>

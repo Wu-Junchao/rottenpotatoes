@@ -7,16 +7,16 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Rating</th>
-      <th>Release Date</th>
+      <th><%= sortable "title", "Title" %></th>
+      <th><%= sortable "rating", "Rating" %></th>
+      <th><%= sortable "release_date", "Release Date" %></th>
     </tr>
   </thead>
 
   <tbody>
     <% @movies.each do |movie| %>
       <tr id="<%= dom_id movie %>">
-        <td><%= link_to movie.title, movie_path(movie) %></td>
+        <td><%= link_to movie.title, movie_path(movie, sort: params[:sort], direction: params[:direction]) %></td>
         <td><%= movie.rating %></td>
         <td><%= movie.release_date.strftime("%B %d, %Y") %></td>
       </tr>
@@ -25,9 +25,9 @@
 
   <tfoot>
     <tr>
-      <td colspan="4">Total Movies: <%= @movies.count %></td>
+      <td colspan="3">Total Movies: <%= @movies.count %></td>
     </tr>
   </tfoot>
 </table>
 
-<%= link_to "New movie", new_movie_path %>
+<%= link_to "New movie", new_movie_path(sort: params[:sort], direction: params[:direction]) %>

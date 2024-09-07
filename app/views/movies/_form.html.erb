@@ -1,4 +1,4 @@
-<%= form_with(model: movie) do |form| %>
+<%= form_with(model: movie , url: movie.persisted? ? movie_path(movie, sort: params[:sort], direction: params[:direction]) : movies_path(sort: params[:sort], direction: params[:direction])) do |form| %>
   <% if movie.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
